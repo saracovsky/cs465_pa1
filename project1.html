@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head>
+<script id="vertex-shader" type="x-shader/x-vertex">
+attribute vec4 vPosition;
+void main(){
+  gl_Position = vPosition;
+}
+</script>
+<script id="fragment-shader" type="x-shader/x-fragment">
+precision mediump float;
+uniform vec4 fcolor;
+
+void main(){
+    gl_FragColor = fcolor;
+}
+</script>
+
+<script type="text/javascript" src="Common/webgl-utils.js"></script>
+<script type="text/javascript" src="Common/initShaders.js"></script>
+<script type="text/javascript" src="Common/MV.js"></script>
+<script type="text/javascript" src="project1.js"></script>
+</head>
+<body>
+<canvas id="gl-canvas" width="512" height="512">
+Oops ... your browser doesn't support the HTML5 canvas element
+</canvas>
+<form>
+<input type="radio" name="gender" value="rock" onclick = "selectRock()" > Rock <br>
+<input type="radio" name="gender" value="house" onclick = "selectHouse()"> House <br>
+<input type="radio" name="gender" value="tree" onclick = "selectTree()"> Tree <br>
+Min with: <input type="text" id="min_width" value="0.2">
+Max with: <input type="text" id="max_width" value="0.6">
+
+<div style="margin-top: 2%">
+            
+        </div>
+</form>
+	<button onclick = "generateOthers()">Generate</button>
+</body>
+</html>
+
+
+
